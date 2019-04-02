@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<router-view></router-view>
+
   </div>
+  <!-- 只能有一个根标签 -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
+
+  mounted(){//登录验证
+   this.$axios({
+     url:"http://localhost:8899/admin/account/islogin",
+     withCredentials: true
+   }).then(res=>{
+     if(res.data.code == "nologin"){
+      //  console.log(res);
+        this.$router.push("/login");
+     }
+   })
+
+  } 
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+*{
+  margin: 0;
+  padding: 0;
 }
+
+
 </style>
