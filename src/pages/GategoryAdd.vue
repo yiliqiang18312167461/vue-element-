@@ -38,12 +38,8 @@ export default {
        sort_id:"",
        title:"",
        class_layer:""
-
      },
      categorys:[],
-
-
-
      }
 
 //  /admin/category/getlist/:tablename
@@ -58,7 +54,7 @@ export default {
 
           const {message}=res.data;
          this.categorys =message;
-           console.log( this.categorys)
+
   })
 
 
@@ -84,15 +80,7 @@ export default {
        setTimeout(function(){
         that.$router.back();
        },2000);
-      
-  
-
-
      }
-
-
-
-
         })
 
 

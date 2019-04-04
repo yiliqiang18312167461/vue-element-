@@ -4,14 +4,21 @@ import App from './App.vue'
 //1引入element-ui
 import ElementUI from 'element-ui';
 
+import './assets/animate.css';
+
 //2引入element-ui样式
 import 'element-ui/lib/theme-chalk/index.css';
 
 //引入axios
 import axios from 'axios';
 
+//引入axios
+import animate from 'animate';
+
 //引入路由模块
 import VueRouter from "vue-router";
+
+
 
 //引入组件
 import Login from "./pages/Login.vue" ;
@@ -23,9 +30,15 @@ import GoodsAdd from "./pages/GoodsAdd.vue";
 import GoodsEdit from "./pages/GoodsEdit.vue"
 import GategoryAdd from "./pages/GategoryAdd.vue"
 
-import store from "./store/index.js"
+
+// 1.导入vuex的store
+import store from "./store";
+
+
+
 //全局注册组件
 Vue.use(ElementUI);
+
 
 // 注册路由
 Vue.use(VueRouter);
@@ -63,5 +76,6 @@ const router = new VueRouter({routes});
 new Vue({
   router,
   store,
+
   render: h => h(App),
 }).$mount('#app')

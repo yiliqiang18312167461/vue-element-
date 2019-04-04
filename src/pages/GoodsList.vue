@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="goodsList">
     <el-row type="flex" justify="space-between" style="margin-bottom:10px">
       <el-col>
         <el-button
@@ -195,6 +195,7 @@ handelSearchbtn(){
 .el-table__header-wrapper {
   height: 70px;
   line-height: 50px;
+
 }
 
 .cell .el-button {

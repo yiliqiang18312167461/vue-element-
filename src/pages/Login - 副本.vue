@@ -1,9 +1,6 @@
 
 <template>
-<div>
-
-
-<el-row type="flex" justify="center" align="middle" class="row_login">
+  <el-row type="flex" justify="center" align="middle" class="row_login">
     <el-form :model="form" label-width="60px" class="form">
       <div class="header">登录</div>
 
@@ -21,9 +18,6 @@
       </el-form-item>
     </el-form>
   </el-row>
-  <div class="kk"></div>
-</div>
-  
 </template>
 
 <script>
@@ -93,24 +87,7 @@ export default {
 
 .row_login .el-form-item__label {
   color: aliceblue;
-
 }
-.kk{
-width:100px;
-height:100px;
-background:red;
-position:relative;
-animation:mymove 5s infinite;
-}
-
-
-@keyframes mymove
-{
-0% {left:0px;}
-50% {left:200px;}
-100% {left:500px;}
-}
-
 
 .row_login .el-form-item {
   width: 350px;
